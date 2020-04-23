@@ -26,30 +26,22 @@ public class ExcelGenerator {
 		sheet.setDefaultColumnWidth(15);
 		sheet.setDefaultRowHeight((short) 400);
 
-		// Carregando os produtos
-		// List<Produto> produtos = listaProdutos;
-
 		int rownum = 0;
 		int cellnum = 0;
 		Cell cell;
 		Row row;
 
-		// Configurando estilos de células (Cores, alinhamento, formatação, etc..)
+		// Configurando estilos de células
 		HSSFDataFormat numberFormat = workbook.createDataFormat();
 
 		CellStyle headerStyle = workbook.createCellStyle();
-//	headerStyle.setFillForegroundColor(IndexedColors.GREY_25_PERCENT.getIndex());
-//	headerStyle.setFillPattern(CellStyle);
-//	headerStyle.setAlignment(CellStyle.ALIGN_CENTER);
-//	headerStyle.setVerticalAlignment(CellStyle.VERTICAL_CENTER);
+
 
 		CellStyle textStyle = workbook.createCellStyle();
-//	textStyle.setAlignment(CellStyle.ALIGN_CENTER);
-		// textStyle.setVerticalAlignment(CellStyle.VERTICAL_CENTER);
+
 
 		CellStyle numberStyle = workbook.createCellStyle();
 		numberStyle.setDataFormat(numberFormat.getFormat("#,##0.00"));
-		// numberStyle.setVerticalAlignment(CellStyle.VERTICAL_CENTER);
 
 		// Configurando Header
 		row = sheet.createRow(rownum++);
